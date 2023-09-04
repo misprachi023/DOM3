@@ -31,10 +31,10 @@ form.addEventListener("submit", function (e)
      {
       if (row[i].getElementsByTagName("td")[1].innerHTML === "High") 
       {
-        row[i].style.backgroundColor = "aqua";
+        row[i].style.backgroundColor = "red";
       } else 
       {
-        row[i].style.backgroundColor = "lightgreen";
+        row[i].style.backgroundColor = "green";
       }
     }
   }
