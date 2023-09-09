@@ -20,8 +20,24 @@ form.addEventListener("submit", function (e)
 
     taskData.innerText = element.taskName;
     priorityData.innerText = element.taskPriority;
-    tableRow.append(taskData, priorityData, favouriteData);
-    return tbody.append(tableRow);
+    if(element.taskName!="" && element.taskPriority!="")
+            {
+                tableRow.append(taskData,priorityData,favouriteData);
+                return tbody.append(tableRow);
+            }
+            else if(element.taskName=="" && element.taskPriority=="")
+            {
+                alert(`Please type your task and select your priority`);
+            }
+            else if(element.taskName=="")
+            {
+                alert(`Please Type your task`);
+            }
+            else if(element.taskPriority=="")
+            {
+    
+              alert(`Please select your priority`);
+            }
   });
 
   let row = document.getElementsByTagName("tr");
